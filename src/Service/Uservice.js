@@ -1,9 +1,9 @@
 import axios from "axios"
 
 
-const userpasswordUrl="http://localhost:8090/user/4th";
-const postuser="http://localhost:8090/user/1st";
-const getuser="http://localhost:8090/user/3rd"
+const userpasswordUrl="http://jtechie.us-east-1.elasticbeanstalk.com/user/4th";
+const postuser="http://jtechie.us-east-1.elasticbeanstalk.com/user/1st";
+const getuser="http://jtechie.us-east-1.elasticbeanstalk.com/user/3rd"
 class Uservice {
   sInUser(user1){
    return axios.post(userpasswordUrl,user1);

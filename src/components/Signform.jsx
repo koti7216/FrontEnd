@@ -59,7 +59,7 @@ class Signform extends Component {
                         </div>  <br/>
                         <div className='form-group'>
                            <label>Password</label><br/><br/>
-                           <input type = "password" placeholder="Password" name="upassword" className="form-control" 
+                           <input  placeholder="Password" name="upassword" className="form-control" 
                                value={this.state.upassword} onChange={this.changeupassword}/>
                         </div> <br/>
                         <button onClick={this.testuser} className="btn btn-primary">Sign-In</button>
