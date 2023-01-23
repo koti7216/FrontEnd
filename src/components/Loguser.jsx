@@ -6,7 +6,6 @@ class Loguser extends Component {
     constructor(props){
         super(props);
         this.state={
-            uid:this.props.useParams,
             uname:"",
             upassword:"",
             scode:""
@@ -14,9 +13,8 @@ class Loguser extends Component {
         this.logout=this.logout.bind(this);
         
     }
-    componentDidMount(){
-        console.log(this.state.uid.id)
-        Uservice.getUser(this.state.uid.id).then((res)=>{
+   componentDidMount(){
+        Uservice.getUser(this.props.location.state.id).then((res)=>{
             
             this.setState({uname:res.data.uname, upassword:res.data.upassword, scode:res.data.scode})
         });

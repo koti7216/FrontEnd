@@ -30,7 +30,7 @@ class Signform extends Component {
             }
             else{
                 let id=parseInt(res.data.uId);
-                this.props.useNav(`/log/${id}`)                
+                this.props.useNav('/log',{state:{id:id}})                
             }
 
         })

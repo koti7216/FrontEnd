@@ -19,7 +19,7 @@ function App() {
             <Route path='/error' element={<ErrorPage/>}></Route>
             <Route path='/signup' element={<Signupform/>}></Route>
             <Route path='/goback' element={<Gobackpage/>}></Route>
-            <Route path='/log/:id' element={<Loguser/>}></Route>
+            <Route path='/log' element={<Loguser/>}></Route>
          </Routes>
       </div>
       </Router>

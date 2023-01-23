@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ErrorPage extends Component {
     render() {
@@ -6,7 +7,7 @@ class ErrorPage extends Component {
             <div>
                 <h1>Entered password or user id is wrong</h1>
                 <div>
-                        if you want to create new account <a href='http://localhost:3000/signup'>click here</a> 
+                        if you want to create new account <Link to='/signup'>click here</Link> 
                     </div>
             </div>
         );
