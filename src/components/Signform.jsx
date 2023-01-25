@@ -7,7 +7,7 @@ class Signform extends Component {
         super(props)
         this.state={
             uname:"",
-            upassword:"",
+            upassword:""
         }
         this.changeuname=this.changeuname.bind(this)
         this.testuser=this.testuser.bind(this)
@@ -25,6 +25,7 @@ class Signform extends Component {
         let user={uname:this.state.uname, upassword:this.state.upassword}
         console.log(user);
        Uservice.sInUser(user).then((res)=>{
+        console.log(res);
         if(res.data===""){
                this.props.useNav("/error")
             }

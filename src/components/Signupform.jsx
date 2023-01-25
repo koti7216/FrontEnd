@@ -8,7 +8,8 @@ class Signupform extends Component {
             uname:"",
             upassword:"",
             scode:``,
-            errormessage:""
+            errormessage:"",
+            usererror:""
         }
         this.changeuname=this.changeuname.bind(this);
         this.changeupassword=this.changeupassword.bind(this);
@@ -27,10 +28,18 @@ class Signupform extends Component {
     saveuser(e){
         e.preventDefault();
         let user={uname:this.state.uname, upassword:this.state.upassword, scode:this.state.scode};
+        let userName={uname:this.state.uname};
         if(user.uname !==""&&user.upassword!==""&&user.scode!==``){
+            Uservice.getuserByname(userName).then((res)=>
+           { console.log(res)
+            if(res.data===""){
         Uservice.sUpUser(user).then((res)=>{
             this.props.useNav("/goback")
         })}
+        else{
+            this.setState({usererror:"user name is invalid"})
+        }
+       })}
         else{
             this.setState({errormessage:"there is an error"})
         }
@@ -68,6 +77,9 @@ class Signupform extends Component {
                         </div>
                         <div className='App error'>
                             <p>{this.state.errormessage}</p>
+                        </div>
+                        <div className='App error'>
+                            <p>{this.state.usererror}</p>
                         </div>
                     </div>
                 </div>
