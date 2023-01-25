@@ -1,7 +1,6 @@
 
 import './App.css';
 import 'bootstrap';
-import ReactEarth from 'react-earth';
 import Signform from './components/Signform';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
 import ErrorPage from './components/ErrorPage';
@@ -11,7 +10,7 @@ import Loguser from './components/Loguser';
 function App() {
   return (
     <div>
-    <div className='App background-blue'>
+    <div className='App App-header'>
       <Router>
       <div className='container'>
         <Routes>
@@ -23,9 +22,6 @@ function App() {
          </Routes>
       </div>
       </Router>
-    </div>
-    <div className='App footer'>
-       <ReactEarth/>
     </div>
     </div>
   );

@@ -13,10 +13,10 @@
   }
 }
 .background-blue{
-  background-color:blanchedalmond;
+  background-color:rgb(165, 161, 156);
 }
 .App-header {
-  background-color: #282c34;
+  background-color: #62666c;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,9 +34,7 @@ font-size: larger;
   color: #61dafb;
 }
 .footer{
-  bottom:0;
-  background-color: #61dafb;
-  height: 1024px;
+  background-color: #879497;
 }
 
 @keyframes App-logo-spin {
