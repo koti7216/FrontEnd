@@ -13,6 +13,7 @@ class Signform extends Component {
         this.testuser=this.testuser.bind(this)
         this.changeupassword=this.changeupassword.bind(this);
         this.signup=this.signup.bind(this);
+        this.about=this.about.bind(this);
     }
     changeuname(event){
         this.setState({uname:event.target.value})
@@ -42,6 +43,10 @@ class Signform extends Component {
         this.props.useNav("/signup")
 
     }
+    about(e){
+        e.preventDefault();
+        this.props.useNav("/about")
+    }
     render() {
         return (
             <div className='border border-5'>
@@ -69,6 +74,9 @@ class Signform extends Component {
                     <div>
                         <h3>To Create your account</h3>
                         <button onClick={this.signup}>Sign-Up</button>
+                    </div>
+                    <div>
+                        <button onClick={this.about}>About</button>
                     </div>
                 </div>
             </div>

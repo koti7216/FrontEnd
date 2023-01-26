@@ -7,6 +7,7 @@ import ErrorPage from './components/ErrorPage';
 import Signupform from './components/Signupform';
 import Gobackpage from './components/Gobackpage';
 import Loguser from './components/Loguser';
+import About from './components/About';
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
             <Route path='/signup' element={<Signupform/>}></Route>
             <Route path='/goback' element={<Gobackpage/>}></Route>
             <Route path='/log' element={<Loguser/>}></Route>
+            <Route path='/about' element={<About/>}></Route>
          </Routes>
       </div>
       </Router>
