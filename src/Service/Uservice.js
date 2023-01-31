@@ -1,10 +1,10 @@
 import axios from "axios"
 
 
-const userpasswordUrl="http://jtechie.us-east-1.elasticbeanstalk.com/user/4th";
-const postuser="http://jtechie.us-east-1.elasticbeanstalk.com/user/1st";
-const getuser="http://jtechie.us-east-1.elasticbeanstalk.com/user/3rd";
-const getUserByUname="http://jtechie.us-east-1.elasticbeanstalk.com/user/6th"
+const userpasswordUrl="http://localhost:5000/user/4th";
+const postuser="http://localhost:5000/user/1st";
+const getuser="http://localhost:5000/user/3rd";
+const getUserByUname="http://localhost:5000/user/6th"
 class Uservice {
   sInUser(user1){
    return axios.post(userpasswordUrl,user1);
