@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Uservice from '../Service/Uservice';
 import navRout from './navRout';
 
+
 class Signform extends Component {
     constructor(props){
         super(props)
@@ -25,6 +26,7 @@ class Signform extends Component {
         e.preventDefault();
         let user={uname:this.state.uname, upassword:this.state.upassword}
         console.log(user);
+        console.log(this.props.cookie);
        Uservice.sInUser(user).then((res)=>{
         console.log(res);
         if(res.data===""){
@@ -65,7 +67,7 @@ class Signform extends Component {
                         </div>  <br/>
                         <div className='form-group'>
                            <label>Password</label><br/><br/>
-                           <input  placeholder="Password" name="upassword" className="form-control" 
+                           <input  placeholder="Password" type="password" name="upassword" className="form-control" 
                                value={this.state.upassword} onChange={this.changeupassword}/>
                         </div> <br/>
                         <button onClick={this.testuser} className="btn btn-primary">Sign-In</button>
