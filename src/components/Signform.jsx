@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Uservice from '../Service/Uservice';
 import navRout from './navRout';
+import Cookies  from 'js-cookie';
 
 
 class Signform extends Component {
@@ -26,7 +27,7 @@ class Signform extends Component {
         e.preventDefault();
         let user={uname:this.state.uname, upassword:this.state.upassword}
         console.log(user);
-        console.log(this.props.cookie);
+        console.log(Cookies.get("token"))
        Uservice.sInUser(user).then((res)=>{
         console.log(res);
         if(res.data===""){
