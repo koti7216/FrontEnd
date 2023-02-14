@@ -1,4 +1,5 @@
 import axios from "axios"
+import Cookies from "js-cookie";
 
 
 const userpasswordUrl="http://localhost:5000/user/4th";
@@ -13,7 +14,7 @@ class Uservice {
     return axios.post(postuser,user1);
   }
   getUser(id){
-    return axios.get(getuser+'/'+id,{withCredentials: true},{headers:'Set-Cookie'})
+    return axios.get(getuser+'/'+id,{withCredentials: true},{headers: {Authorization: `Bearer ${Cookies.get("token")}`}})
   }
   getuserByname(uname){
     return axios.post(getUserByUname,uname,{withCredentials: true},{headers:'Set-Cookie'})
