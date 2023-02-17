@@ -7,7 +7,8 @@ class ErrorPage extends Component {
             <div>
                 <h1>Entered password or user id is wrong</h1>
                 <div>
-                        if you want to create new account <Link to='/signup'>click here</Link> 
+                        if you want to create new account <Link to='/signup'>click here</Link>
+                        <p>if you want to goback to signin <Link to='/'>click here</Link></p> 
                     </div>
             </div>
         );
