@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import navRout from './navRout';
 import Uservice from '../Service/Uservice';
 
+
 class Loguser extends Component {
     constructor(props){
         super(props);
@@ -32,6 +33,7 @@ class Loguser extends Component {
                 <div>
                     <p>Hiii... {this.state.uname}</p>
                     <p> your Secret code is {this.state.scode}</p>
+                    <h2><a href="http://localhost:3001">For Employe management click here</a></h2>
                 </div>
                 <div className='bottom'>
                     <button className='btn btn-primary' onClick={this.logout}>Logout</button>
