@@ -1,7 +1,7 @@
 import axios from "axios"
 import Cookies from "js-cookie";
 
-
+const baseurl="http://localhost:5000/user/7th";
 const userpasswordUrl="http://localhost:5000/user/4th";
 const postuser="http://localhost:5000/user/1st";
 const getuser="http://localhost:5000/user/3rd";
@@ -18,6 +18,9 @@ class Uservice {
   }
   getuserByname(uname){
     return axios.post(getUserByUname,uname,{withCredentials: true},{headers:'Set-Cookie'})
+  }
+  logoutus(){
+    return axios.post(baseurl);
   }
    
 }

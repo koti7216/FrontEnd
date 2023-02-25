@@ -23,7 +23,7 @@ class Loguser extends Component {
     }
     logout(e){
         e.preventDefault();
-        this.props.useNav("/")
+        Uservice.logoutus().then((res)=>{this.props.useNav(res.data)})
     }
     
     render() {
