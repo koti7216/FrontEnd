@@ -9,7 +9,8 @@ class Loguser extends Component {
         this.state={
             uname:"",
             upassword:"",
-            scode:""
+            scode:"",
+            sigm:true
         }
         this.logout=this.logout.bind(this);
         
@@ -23,12 +24,16 @@ class Loguser extends Component {
     }
     logout(e){
         e.preventDefault();
-        Uservice.logoutus().then((res)=>{this.props.useNav(res.data)})
+        Uservice.logoutus().then((res)=>{
+            this.setState({sigm:false});
+            localStorage.clear();
+            this.props.useNav(res.data,{replace:true})})
     }
     
     render() {
         return (
             <div>
+            {this.state.sigm && <div>
                 <h1>Welcome to code Storage</h1>
                 <div>
                     <p>Hiii... {this.state.uname}</p>
@@ -38,6 +43,7 @@ class Loguser extends Component {
                 <div className='bottom'>
                     <button className='btn btn-primary' onClick={this.logout}>Logout</button>
                 </div>
+            </div>}
             </div>
         );
     }

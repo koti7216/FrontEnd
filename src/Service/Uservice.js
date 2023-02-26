@@ -1,9 +1,9 @@
 import axios from "axios"
 import Cookies from "js-cookie";
 
-const baseurl="http://localhost:5000/user/7th";
+const baseurl="http://localhost:5000/user/1st/log";
 const userpasswordUrl="http://localhost:5000/user/4th";
-const postuser="http://localhost:5000/user/1st";
+const postuser="http://localhost:5000/user/1st/sign";
 const getuser="http://localhost:5000/user/3rd";
 const getUserByUname="http://localhost:5000/user/6th"
 class Uservice {
